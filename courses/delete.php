@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title Here</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- CSS link -->
+</head>
 <?php
 require_once '../config/db.php';
 
@@ -20,3 +28,5 @@ if ($id > 0 && mysqli_query($conn, $query)) {
 	echo 'Error: ' . mysqli_error($conn);
 }
 ?>
+</body>
+</html>

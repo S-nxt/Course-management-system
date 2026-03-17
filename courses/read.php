@@ -3,7 +3,15 @@ require_once '../config/db.php';
 
 $result = mysqli_query($conn, 'SELECT * FROM courses');
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title Here</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- CSS link -->
+</head>
+<body>
 <h2>All Courses</h2>
 
 <table border="1">
@@ -34,3 +42,5 @@ $result = mysqli_query($conn, 'SELECT * FROM courses');
 <br>
 <a href="create.php">Add New Course</a> |
 <a href="../index.php">Home</a>
+</body>
+</html>

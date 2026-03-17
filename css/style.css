@@ -1,0 +1,126 @@
+/* General page style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 20px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #34495e;
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2980b9;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+table th, table td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* Forms */
+form {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Links */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Horizontal line */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    form, table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    nav {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
