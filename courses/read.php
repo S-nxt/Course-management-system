@@ -51,9 +51,10 @@ $isAdmin = $_SESSION['role'] === 'admin';
 </table>
 
 <br>
-<?php if ($isAdmin) { ?>
-<a href="create.php">Add New Course</a> |
+<?php
+if ($isAdmin) { ?>
+<a href="create.php" class="add-btn">Add New Course</a> |
 <?php } ?>
-<a href="../logout.php">Logout</a>
+<a href="../logout.php" class="logout-link">Logout</a>
 </body>
 </html>
