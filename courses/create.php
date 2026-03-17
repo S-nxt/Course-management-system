@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		echo 'Course name can only contain letters, numbers, and spaces.';
 		exit();
 	}
-	if(!preg_match('/^[a-zA-Z0-9\s]+$/', $course_code)) {
-		echo 'Course code can only contain letters, numbers, and spaces.';
+	if(!preg_match('/^[a-zA-Z0-9\s\-]+$/', $course_code)) {
+		echo 'Course code can only contain letters, numbers, spaces, and hyphens.';
 		exit();
 	}
 	if(!is_numeric($credits) || $credits <= 0) {
