@@ -148,8 +148,9 @@ td a:hover {
     text-align: center;
     margin-top: 20px;
 }
-
-
+a {
+    color: rgb(103, 112, 185);
+}
 /* Responsive */
 @media screen and (max-width: 768px) {
     form,
