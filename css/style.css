@@ -1,161 +1,127 @@
-/* Body */
+/* General page style */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f7fb;
-    margin: 0;
-    padding: 0;
-}
-
-/* Main container */
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 8px lightgrey;
-}
-
-/* Login container */
-.login-container {
-    width: 400px;
-    margin: 60px auto;
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 8px lightgrey;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 20px;
 }
 
 /* Headings */
-h1, h2 {
+h1 {
     text-align: center;
-    color: #2f3e4e;
-    margin-bottom: 20px;
+    color: #2c3e50;
 }
 
-/* Form box */
+h2 {
+    margin-top: 20px;
+    color: #34495e;
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2980b9;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+table th, table td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* Forms */
 form {
-    width: 400px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 8px lightgrey;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    max-width: 500px;
+    margin-top: 20px;
 }
 
-/* Labels */
 label {
     font-weight: bold;
-    display: block;
-    margin-bottom: 6px;
-    color: #3d4b5a;
 }
 
-/* Inputs */
 input[type="text"],
 input[type="password"],
 input[type="number"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccd6e0;
-    border-radius: 6px;
-    background-color: #fafcff;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
 }
 
-/* Button */
+/* Buttons */
 button {
-    padding: 10px 20px;
-    background-color: #6fa8dc;
+    background-color: #2980b9;
     color: white;
+    padding: 8px 12px;
     border: none;
-    border-radius: 6px;
-    font-size: 15px;
     cursor: pointer;
-    display: block;
-    margin: 10px auto;
 }
 
 button:hover {
-    background-color: #4a86e8;
+    background-color: #3498db;
 }
 
-/* Table */
-table {
-    width: 100%;
+/* Links */
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Horizontal line */
+hr {
     margin-top: 20px;
-    background-color: white;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
 }
 
-/* Table header */
-th {
-    background-color: #aec4dc;
-    color: white;
-    padding: 12px;
-}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
 
-/* Table data */
-td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #e2e8f0;
-}
+    form, table {
+        width: 100%;
+        font-size: 14px;
+    }
 
-/* Edit and Delete links */
-td a {
-    color: #9aaec4;
-    text-decoration: none;
-    font-weight: bold;
-}
+    nav {
+        display: block;
+        margin-bottom: 15px;
+    }
 
-td a:hover {
-    color: #7d91a8;
-}
-
-/* Add new course */
-.add-btn {
-    display: inline-block;
-    background-color: #6fa8dc;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-top: 15px;
-}
-
-.add-btn:hover {
-    background-color: #4a86e8;
-}
-
-/* Logout */
-.logout-link {
-    display: inline-block;
-    background-color: #9aaec4;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-left: 8px;
-}
-
-.logout-link:hover {
-    background-color: #7d91a8;
-}
-
-/* Link box */
-.link-box {
-    text-align: center;
-    margin-top: 20px;
-}
-
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    form,
-    .container,
-    .login-container {
-        width: 90%;
-        max-width: 90%;
+    nav a {
+        display: block;
+        margin: 5px 0;
     }
 }
