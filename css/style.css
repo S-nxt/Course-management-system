@@ -65,6 +65,7 @@ label {
 }
 
 input[type="text"],
+input[type="password"],
 input[type="number"] {
     width: 100%;
     padding: 8px;

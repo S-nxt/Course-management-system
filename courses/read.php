@@ -1,7 +1,14 @@
 <?php
+session_start();
 require_once '../config/db.php';
 
+if (!isset($_SESSION['role'])) {
+	header('Location: ../index.php');
+	exit();
+}
+
 $result = mysqli_query($conn, 'SELECT * FROM courses');
+$isAdmin = $_SESSION['role'] === 'admin';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +28,9 @@ $result = mysqli_query($conn, 'SELECT * FROM courses');
 		<th>Course Code</th>
 		<th>Description</th>
 		<th>Credits</th>
+		<?php if ($isAdmin) { ?>
 		<th>Actions</th>
+		<?php } ?>
 	</tr>
 
 	<?php while ($row = mysqli_fetch_assoc($result)) { ?>
@@ -31,16 +40,20 @@ $result = mysqli_query($conn, 'SELECT * FROM courses');
 		<td><?php echo $row['course_code']; ?></td>
 		<td><?php echo $row['description']; ?></td>
 		<td><?php echo $row['credits']; ?></td>
+		<?php if ($isAdmin) { ?>
 		<td>
 			<a href="update.php?id=<?php echo $row['id']; ?>">Edit</a> |
 			<a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
 		</td>
+		<?php } ?>
 	</tr>
 	<?php } ?>
 </table>
 
 <br>
+<?php if ($isAdmin) { ?>
 <a href="create.php">Add New Course</a> |
-<a href="../index.php">Home</a>
+<?php } ?>
+<a href="../logout.php">Logout</a>
 </body>
 </html>

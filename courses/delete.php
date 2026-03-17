@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="../css/style.css"> <!-- CSS link -->
 </head>
 <?php
+session_start();
 require_once '../config/db.php';
+
+if (!isset($_SESSION['role'])) {
+	header('Location: ../index.php');
+	exit();
+}
+
+if ($_SESSION['role'] !== 'admin') {
+	header('Location: read.php');
+	exit();
+}
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 

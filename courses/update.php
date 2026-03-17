@@ -8,7 +8,18 @@
 </head>
 <body>
 <?php
+session_start();
 require_once '../config/db.php';
+
+if (!isset($_SESSION['role'])) {
+	header('Location: ../index.php');
+	exit();
+}
+
+if ($_SESSION['role'] !== 'admin') {
+	header('Location: read.php');
+	exit();
+}
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
@@ -77,6 +88,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <br>
 <a href="read.php">Back to Courses</a> |
-<a href="../index.php">Home</a>
+<a href="../logout.php">Logout</a>
 </body>
 </html>

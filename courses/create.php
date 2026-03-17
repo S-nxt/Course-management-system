@@ -1,5 +1,16 @@
 <?php
+session_start();
 require_once '../config/db.php';
+
+if (!isset($_SESSION['role'])) {
+	header('Location: ../index.php');
+	exit();
+}
+
+if ($_SESSION['role'] !== 'admin') {
+	header('Location: read.php');
+	exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$course_name = trim($_POST['course_name']);
@@ -65,6 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <br>
 <a href="read.php">Back to Courses</a> |
-<a href="../index.php">Home</a>
+<a href="../logout.php">Logout</a>
 </body>
 </html>
