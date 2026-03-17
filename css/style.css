@@ -97,6 +97,38 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Add Button */
+.add-btn {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #229954;
+    text-decoration: none;
+}
+
+/* Logout Link */
+.logout-link {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #c0392b;
+    text-decoration: none;
+}
+
 /* Horizontal line */
 hr {
     margin-top: 20px;
