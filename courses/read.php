@@ -19,9 +19,18 @@ $isAdmin = $_SESSION['role'] === 'admin';
     <link rel="stylesheet" href="../css/style.css"> <!-- CSS link -->
 </head>
 <body>
-<h2>All Courses</h2>
+<div class="container">
+	<div class="courses-header">
+		<h2>All Courses</h2>
+		<div class="top-actions">
+		<?php if ($isAdmin) { ?>
+		<a href="create.php" class="add-btn">Add New Course</a>
+		<?php } ?>
+		<a href="../logout.php" class="logout-link">Logout</a>
+		</div>
+	</div>
 
-<table border="1">
+	<table border="1">
 	<tr>
 		<th>ID</th>
 		<th>Course Name</th>
@@ -48,13 +57,7 @@ $isAdmin = $_SESSION['role'] === 'admin';
 		<?php } ?>
 	</tr>
 	<?php } ?>
-</table>
-
-<br>
-<?php
-if ($isAdmin) { ?>
-<a href="create.php" class="add-btn">Add New Course</a> |
-<?php } ?>
-<a href="../logout.php" class="logout-link">Logout</a>
+	</table>
+</div>
 </body>
 </html>

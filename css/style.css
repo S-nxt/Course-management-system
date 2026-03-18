@@ -4,6 +4,7 @@ body {
     background-color: #f5f7fb;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 /* Main container */
@@ -144,6 +145,34 @@ td a:hover {
     background-color: #7d91a8;
 }
 
+/* Top-right actions on course list page */
+.courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.courses-header h2 {
+    margin: 0;
+    text-align: left;
+}
+
+.top-actions {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+}
+
+.top-actions .add-btn,
+.top-actions .logout-link {
+    margin: 0;
+}
+
 /* Link box */
 .link-box {
     text-align: center;
@@ -157,5 +186,24 @@ td a:hover {
     .login-container {
         width: 90%;
         max-width: 90%;
+    }
+
+    .top-actions {
+        position: static;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .courses-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .courses-header h2 {
+        margin-bottom: 8px;
+    }
+
+    .courses-header .top-actions {
+        width: 100%;
     }
 }
