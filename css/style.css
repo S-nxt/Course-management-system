@@ -92,7 +92,7 @@ table {
 
 /* Table header */
 th {
-    background-color: #aec4dc;
+    background-color: #a3a497;
     color: white;
     padding: 12px;
 }
@@ -173,6 +173,51 @@ td a:hover {
     margin: 0;
 }
 
+/* Courses page layout with left links */
+.courses-layout {
+    width: 94%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.courses-container {
+    flex: 1;
+    margin: 40px 0;
+}
+
+.left-links {
+    width: 240px;
+    margin-top: 40px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px lightgrey;
+}
+
+.left-links h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #2f3e4e;
+    font-size: 18px;
+}
+
+.left-links a {
+    display: block;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #3d4b5a;
+    background-color: #f3f7fc;
+}
+
+.left-links a:hover {
+    background-color: #e4edf8;
+}
+
 /* Link box */
 .link-box {
     text-align: center;
@@ -205,5 +250,20 @@ td a:hover {
 
     .courses-header .top-actions {
         width: 100%;
+    }
+
+    .courses-layout {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .left-links {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .courses-container {
+        width: 100%;
+        margin-top: 0;
     }
 }

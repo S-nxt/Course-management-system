@@ -74,8 +74,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<button type="submit" value="Submit">Add Course</button>
 </form>
 
-<br>
-<a href="read.php">Back to Courses</a> |
-<a href="../logout.php">Logout</a>
+	<div class="link-box">
+		<a href="read.php" class="add-btn">Back to Courses</a>
+		<a href="../logout.php" class="logout-link">Logout</a>
+	</div>
 </body>
 </html>
