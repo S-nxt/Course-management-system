@@ -27,6 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		echo 'Course name can only contain letters, numbers, and spaces.';
 		exit();
 	}
+	if(!preg_match('/^[a-zA-Z]/', $course_name)) {
+		echo 'Course name should start with a letter.';
+		exit();
+	}
+	
 	if(!preg_match('/^[a-zA-Z0-9\s\-]+$/', $course_code)) {
 		echo 'Course code can only contain letters, numbers, spaces, and hyphens.';
 		exit();

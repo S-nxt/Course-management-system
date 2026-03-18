@@ -9,3 +9,10 @@ Creating a Course Management System, which can perform the CRUD Operation.
     - CSS (Design)
     - PHP (Server-side scripting)
     - MySQL (Database)
+
+**This is done by everyone**
+- Group C:
+    - Adarsha Shrestha(3)
+    - Biswash Shahi(11)
+    - Milisha Sapkota(19)
+    - Saksham Dhungana(27)

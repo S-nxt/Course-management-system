@@ -59,6 +59,7 @@ input[type="text"],
 input[type="password"],
 input[type="number"] {
     width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccd6e0;
@@ -92,7 +93,7 @@ table {
 
 /* Table header */
 th {
-    background-color: #a3a497;
+    background-color: #688eba;
     color: white;
     padding: 12px;
 }
